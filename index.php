@@ -1,6 +1,7 @@
 <?php
 include("data/class.PDOlisteGestion.php");
 include("vues/v_entete.php") ;
+include("vues/v_sommaire.php");
 session_start();
 $pdo = PdogestionListe::getPdogestionListe();
 if(!isset($_REQUEST['uc'])){
@@ -9,7 +10,7 @@ if(!isset($_REQUEST['uc'])){
 $uc = $_REQUEST['uc'];
 switch($uc){
 	case 'acceuil':
-		// include("controleurs/c_connexion.php");
+		include("controleurs/c_liste.php");
 		break;
 
 }
